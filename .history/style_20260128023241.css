@@ -127,11 +127,9 @@ i{
         display: none;
     }
 }
-
-
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #F2F5F6;;
+    font-family: 'Inter', sans-serif;
+    background-color: gray;
 }
 
 .hero {
@@ -144,120 +142,123 @@ body {
 
 .hero-container {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
     width: 100%;
     max-width: 1300px;
-    gap: 20px;
+    align-items: center;
+    justify-content: center; /* Sıkışıklığı önlemek için ortaladık */
+    gap: 30px;
 }
 
 /* Yan Resimler */
 .side-box {
-    flex: 0 0 280px;
+    flex: 0 0 250px; /* Genişliği sabitleyerek metni boğmasını engelledik */
+    display: flex;
+    justify-content: center;
 }
 
 .side-img {
     width: 100%;
     height: auto;
-    display: block;
 }
 
-/* Orta Gri Kart */
+/* Gri Arka Planlı Yazı Kartı */
 .center-box {
     flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .text-card {
-    background-color: #f4f4f4; /* Açık Gri Arka Plan */
-    padding: 50px 30px;
-    border-radius: 30px;
+    background-color: var(--bg-gray);
+    padding: 60px 40px;
+    border-radius: 40px;
     text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
 h1 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    color: #111;
+    font-size: 2.8rem;
+    color: var(--text-dark);
+    margin-bottom: 20px;
 }
 
-.accent {
-    color: #003d52;
-}
+.accent { color: var(--primary-blue); }
 
 p {
-    color: #666;
-    margin-bottom: 30px;
+    color: #555;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
 }
 
-/* BUTONLAR - Burası Kritik */
+/* Buton Düzeni */
 .hero-btns {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    margin-top: 10px;
+    gap: 25px;
+    position: relative;
+    z-index: 5;
 }
 
 .btn-primary {
-    display: inline-block;
-    background-color: #003d52 !important; /* Lacivert/Mavi Buton */
-    color: #ffffff !important;
-    padding: 15px 30px;
+    background-color: var(--primary-blue);
+    /* color: #fff !important; */
+    padding: 16px 35px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
-    min-width: 150px;
-    box-shadow: 0 5px 15px rgba(0, 61, 82, 0.3);
+    display: inline-block;
+    transition: 0.3s;
 }
 
 .btn-video {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #003d52;
+    color: var(--primary-blue);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .play-icon {
-    background-color: #003d52;
+    background: var(--primary-blue);
     color: white;
-    width: 35px;
-    height: 35px;
+    width: 40px; height: 40px;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex; align-items: center; justify-content: center;
 }
 
-/* --- RESPONSIVE (Resimler Yan Yana) --- */
+/* --- RESPONSIVE (Resimler Yan Yana Kalacak) --- */
 @media (max-width: 1024px) {
     .hero-container {
-        flex-direction: column; /* Mobilde dikey ama resimler hariç */
+        flex-direction: column; /* Mobilde dikey düzen ama... */
+    }
+    
+    .center-box { order: -1; margin-bottom: 40px; } /* Yazı en üstte */
+
+    /* Alt kısımda resimleri yan yana tutan düzen */
+    .hero-container::after {
+        content: "";
+        display: none;
     }
 
-    .center-box {
-        order: 1; /* Yazı en üstte */
-        width: 100%;
-    }
-
-    /* Resimlerin yan yana gelmesi için kapsayıcı */
-    .hero-container {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
+    /* Resim kutularını alt alta değil, yan yana dizmek için */
     .side-box {
-        flex: 0 0 45%; /* Resimler yan yana %45 kaplar */
-        order: 2; /* Resimler yazının altına gelir */
+        flex: 0 0 45%; 
+        display: inline-flex;
     }
+    
+    /* Resimlerin mobilde yan yana gelmesi için container'ı row'a zorluyoruz (alt kısım için) */
+    .hero-container {
+        display: grid;
+        grid-template-areas: 
+            "center center"
+            "left right";
+    }
+    .center-box { grid-area: center; }
+    .side-box:first-child { grid-area: left; }
+    .side-box:last-child { grid-area: right; }
 
-    .side-img {
-        max-width: 180px;
-        margin: 0 auto;
-    }
-
-    h1 {
-        font-size: 1.8rem;
-    }
+    .side-img { max-width: 150px; }
+    h1 { font-size: 1.8rem; }
 }
