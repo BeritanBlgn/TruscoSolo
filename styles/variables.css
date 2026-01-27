@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Cal+Sans&family=Inter&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Syne:wght@400..800&family=Taviraj:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  /*FONT-FAMİLY*/
+  --primary-font: "Plus Jakarta Sans", sans-serif;
+  --secondary-font: "Inter", sans-serif;
+
+  /*FONT-SIZES*/
+  --font-size-s: 15px;
+  --font-size-m: 20px;
+  --font-size-l: 28px;
+  --font-size-xl: 36px;
+  --font-size-xxl: 58px;
+  /*COLORS*/
+  --clr-green: #26bb74;
+  --clr-yellow:#F0B73F;
+  --clr-black: #000000;
+  --clr-prime: #043A53;
+  --clr-white: #ffffff;
+  --clr-gray: #787878;
+  --clr-dark: #12141D;
+  --clr-light: #F8F9FB;
+  --clr-light-gray: #F2F5F6;
+  --clr-light-dark: #6c757d;
+  --clr-bright-gray: #ececec;
+  --clr-shuttle-gray:#4F6169;
+  --clr-night-blue:#001635;
+} 
