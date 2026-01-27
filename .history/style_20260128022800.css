@@ -127,13 +127,14 @@ i{
         display: none;
     }
 }
-
+/* --- Global Ayarlar --- */
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #F2F5F6;;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--body-bg);
 }
 
+/* --- Hero Düzeni --- */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -144,83 +145,87 @@ body {
 
 .hero-container {
     display: flex;
+    width: 100%;
+    max-width: 1400px;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    max-width: 1300px;
-    gap: 20px;
+    gap: 10px;
 }
 
-/* Yan Resimler */
+/* --- Yan Resim Kutuları --- */
 .side-box {
-    flex: 0 0 280px;
+    flex: 1; 
+    display: flex;
+    justify-content: center;
 }
 
 .side-img {
     width: 100%;
+    max-width: 300px;
     height: auto;
-    display: block;
 }
 
-/* Orta Gri Kart */
+/* --- Orta Metin ve Gri Arka Plan --- */
 .center-box {
-    flex: 1;
+    flex: 2;
+    display: flex;
+    justify-content: center;
 }
 
-.text-card {
-    background-color: #f4f4f4; /* Açık Gri Arka Plan */
-    padding: 50px 30px;
-    border-radius: 30px;
+.content-wrapper {
+    background-color: var(--bg-gray);
+    padding: 40px;
+    border-radius: 20px;
     text-align: center;
+    width: 100%;
 }
 
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    color: #111;
+.center-box h1 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--text-main);
 }
 
 .accent {
-    color: #003d52;
+    color: var(--primary-dark);
 }
 
-p {
-    color: #666;
+.center-box p {
+    color: var(--text-muted);
     margin-bottom: 30px;
+    font-size: 1.05rem;
 }
 
-/* BUTONLAR - Burası Kritik */
+/* --- Buton Düzenlemeleri --- */
 .hero-btns {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    margin-top: 10px;
 }
 
 .btn-primary {
-    display: inline-block;
-    background-color: #003d52 !important; /* Lacivert/Mavi Buton */
-    color: #ffffff !important;
-    padding: 15px 30px;
+    background-color: var(--primary-dark);
+    color: white;
+    padding: 14px 28px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
-    min-width: 150px;
-    box-shadow: 0 5px 15px rgba(0, 61, 82, 0.3);
+    white-space: nowrap;
 }
 
 .btn-video {
     display: flex;
     align-items: center;
-    gap: 10px;
-    color: #003d52;
+    gap: 8px;
+    color: var(--primary-dark);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .play-icon {
-    background-color: #003d52;
+    background: var(--primary-dark);
     color: white;
     width: 35px;
     height: 35px;
@@ -228,36 +233,39 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 12px;
 }
 
-/* --- RESPONSIVE (Resimler Yan Yana) --- */
+/* --- RESPONSIVE AYARLAR --- */
 @media (max-width: 1024px) {
+    /* Resimlerin yan yana kalmasını sağlar */
     .hero-container {
-        flex-direction: column; /* Mobilde dikey ama resimler hariç */
+        flex-wrap: wrap; 
+        justify-content: center;
     }
 
     .center-box {
-        order: 1; /* Yazı en üstte */
-        width: 100%;
-    }
-
-    /* Resimlerin yan yana gelmesi için kapsayıcı */
-    .hero-container {
-        display: flex;
-        flex-wrap: wrap;
+        flex: 0 0 100%; /* Metin kutusu mobilde tam genişlik kaplar */
+        order: -1; /* Metin her zaman en üstte kalır */
+        margin-bottom: 30px;
     }
 
     .side-box {
-        flex: 0 0 45%; /* Resimler yan yana %45 kaplar */
-        order: 2; /* Resimler yazının altına gelir */
+        flex: 1 1 45%; /* Resimler yan yana durur (%45 + %45) */
     }
 
     .side-img {
-        max-width: 180px;
-        margin: 0 auto;
+        max-width: 180px; /* Mobilde resimler biraz küçülür */
     }
 
-    h1 {
-        font-size: 1.8rem;
+    .center-box h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Çok küçük ekranlarda butonları alt alta alabiliriz */
+    .hero-btns {
+        flex-direction: column;
     }
 }
