@@ -288,31 +288,3 @@ p {
     flex-grow: 1;
     gap:20;
 }
-.logo-grid img{
-    max-height: 35px;
-    width: auto;
-    filter:grayscale(100%);
-    opacity: 0.7;
-    transition: all 0.3s ease;
-}
-.logo-grid:hover{
-    filter: grayscale(0%);
-opacity: 1;
-}
-@media (max-width:1024px){
-    .container{
-        flex-direction: column;
-        text-align: center;
-    }
-    .logo-grid{
-        flex-wrap: wrap;
-        justify-content: center;
-        gap:40px;
-    }
-
-}
-@media(max-width:372px){
-    .logo-grid img{
-        max-height: 25px;
-    }
-}

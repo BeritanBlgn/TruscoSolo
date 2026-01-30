@@ -231,7 +231,7 @@ p {
 }
 
 /* --- RESPONSIVE (Resimler Yan Yana) --- */
-@media (max-width: 1024px) {
+@media (max-width: 375px) {
     .hero-container {
         flex-direction: column; /* Mobilde dikey ama resimler hariç */
     }
