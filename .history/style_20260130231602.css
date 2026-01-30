@@ -311,7 +311,7 @@ opacity: 1;
     }
 
 }
-@media(max-width:372px){
+@media(max-width:1024px){
     .logo-grid img{
         max-height: 25px;
     }

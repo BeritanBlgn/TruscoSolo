@@ -299,20 +299,3 @@ p {
     filter: grayscale(0%);
 opacity: 1;
 }
-@media (max-width:1024px){
-    .container{
-        flex-direction: column;
-        text-align: center;
-    }
-    .logo-grid{
-        flex-wrap: wrap;
-        justify-content: center;
-        gap:40px;
-    }
-
-}
-@media(max-width:372px){
-    .logo-grid img{
-        max-height: 25px;
-    }
-}
