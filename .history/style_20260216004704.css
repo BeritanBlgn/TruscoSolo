@@ -1,0 +1,393 @@
+@import url(./styles/index.css);
+
+body {
+    background-color: #F2F5F6;
+}
+header {
+    display: flex;
+    max-width: 1440px;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    padding: 24px 20px;
+}
+
+.headerList {
+    display: flex;
+    gap: 40px;
+    padding-top: 24px;
+    padding-right: 20px;
+    padding-bottom: 24px;
+    padding-left: 20px;
+    list-style: none;
+    margin: 0px;
+   
+   
+}
+
+.headerList li a {
+font-family: "Lato";
+font-weight: 700;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: #12141D;
+text-decoration: none;
+opacity: 0.7;
+border-radius: 8px;
+padding: 10px;
+}
+
+ 
+.headerList li a:hover {
+  background-color: rgb(121, 151, 212);
+
+  }
+
+
+
+
+.headerLogo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    height: 37px; 
+}
+.headerLogo span {
+   color: #043A53;
+   font-size: 40px;
+}
+.buttonContainer{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.ah_btn{ 
+    border-radius: 42px;
+    color:#FFFFFF;
+    font-family: "Lato";
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    background-color: #043A53;
+    width: 92px;
+    height: 50px;
+    gap: 10px;
+    border-radius: 42px;
+    cursor:pointer;
+    border: none;
+
+
+
+}
+    .Login {
+    background-color: #FFFFFF;
+    gap: 10px;
+    border-radius: 42px;
+    color: #12141D;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    font-family: "Lato";
+    font-weight: 800;
+    font-style: normal;
+    font-size: 16px;
+    line-height: normal;
+    letter-spacing: 0%;
+    text-align: center;
+    opacity: 0.7;
+
+ }
+
+ .ah_btn:hover{
+   opacity: 0.9;
+  
+
+
+}
+.buttonContainer
+i{
+    display: none;
+    font-size: 40px;
+}
+ @media (max-width:940px) {
+    .headerList{
+        display: none;
+    }
+    .buttonContainer i{
+        display: block;
+    }
+    
+}
+@media (max-width:444px) {
+
+    .ah_btn{
+        display: none;
+    }
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F2F5F6;;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1300px;
+    gap: 20px;
+}
+
+/* Yan Resimler */
+.side-box {
+    flex: 0 0 280px;
+}
+
+.side-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Orta Gri Kart */
+.center-box {
+    flex: 1;
+}
+
+.text-card {
+    background-color: #f4f4f4; /* Açık Gri Arka Plan */
+    padding: 50px 30px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #111;
+}
+
+.accent {
+    color: #003d52;
+}
+
+p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* BUTONLAR - Burası Kritik */
+.hero-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #003d52 !important; /* Lacivert/Mavi Buton */
+    color: #ffffff !important;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    min-width: 150px;
+    box-shadow: 0 5px 15px rgba(0, 61, 82, 0.3);
+}
+
+.btn-video {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #003d52;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.play-icon {
+    background-color: #003d52;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- RESPONSIVE (Resimler Yan Yana) --- */
+@media (max-width: 1024px) {
+    .hero-container {
+        flex-direction: column; /* Mobilde dikey ama resimler hariç */
+    }
+
+    .center-box {
+        order: 1; /* Yazı en üstte */
+        width: 100%;
+    }
+
+    /* Resimlerin yan yana gelmesi için kapsayıcı */
+    .hero-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .side-box {
+        flex: 0 0 45%; /* Resimler yan yana %45 kaplar */
+        order: 2; /* Resimler yazının altına gelir */
+    }
+
+    .side-img {
+        max-width: 180px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+.logo-section{
+    padding: 40px 20px;
+    background-color: white;
+    font-family: sans-serif;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+.logo-text{
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+    min-width: 200px;
+}
+.logo-grid{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-grow: 1;
+    gap:20;
+}
+.logo-grid img{
+    max-height: 35px;
+    width: auto;
+    filter:grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+.logo-grid:hover{
+    filter: grayscale(0%);
+opacity: 1;
+}
+@media (max-width:1024px){
+    .container{
+        flex-direction: column;
+        text-align: center;
+    }
+    .logo-grid{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap:40px;
+    }
+
+}
+@media(max-width:372px){
+    .logo-grid img{
+        max-height: 25px;
+    }
+}
+.videoContainer{
+    width: 100%;
+    background-color: #043A53;
+    display:flex;
+    padding: 0 20px;
+}
+.video-section{
+    max-width: 1140px;
+    margin:auto;
+    display:flex;
+    flex-direction: column;
+}
+.video{
+    max-width: 1140px;
+    width: 100%;
+    margin: auto;
+    max-height: 636px;
+    object-fit: fill;
+    display: flex;
+}
+.video-section-header{
+    align-items: center;
+    gap: 20px;
+    margin: auto;
+    padding-bottom: 64px;
+    padding-top: 100px;
+    max-width: 1140px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.div-baslik{
+    font-family: "Lato";
+    font-weight: 700;
+    font-size: clamp(24px, 3vw, 36px);
+
+    line-height: 72px;
+    letter-spacing: -2%;
+
+    width: 100%;
+    color: white;
+    display: flex;
+}
+.video-highlight{
+    display: flex;
+    max-width: 588px;
+    color:gold;
+
+}
+.video-paragraf {
+    font-family: "Lato";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0%;
+
+    display: flex;
+    max-width: 432px;
+    width: 100%;
+    color: white;
+}
+@media (max-width:1000px) {
+    .video-section-header{
+        flex-direction: column;
+    }
+    .div-baslik{
+        line-height: 50px;
+    }
+    .video-section-header{
+        padding-top: 50px;
+    }
+    .video{
+        max-height: 400px;
+    }
+}
