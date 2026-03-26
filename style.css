@@ -391,3 +391,106 @@ opacity: 1;
         max-height: 400px;
     }
 }
+
+/* Genel Ayarlar */
+
+
+.Benefits-container {
+    display: flex;
+    max-width: 1200px;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap; /* Mobil uyum için */
+}
+
+/* Başlık Alanı Stilleri */
+.header-content {
+    flex: 1;
+    min-width: 300px;
+    margin-left:150px;
+}
+
+.badge {
+    background-color: #0b3d52;
+    color: white;
+    padding: 8px 25px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-top: 25px;
+
+}
+
+.header-content h1 {
+    font-size: 3rem;
+    color: #1a1a1a;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.header-content p {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Kartlar Alanı */
+.cards-wrapper {
+    display: flex;
+    gap: 20px;
+    flex: 2;
+    background-color: #F2F5F6;
+}
+
+.card {
+    background-color: #F2F5F6; /* Görseldeki açık gri/mavi tonu */
+    padding: 40px 30px;
+    border-radius: 15px;
+    transition: all 0.4s ease; /* Yumuşak geçiş efekti */
+    cursor: pointer;
+    flex: 1;
+    border: 1px solid transparent;
+}
+
+/* --- HOVER EFEKTİ --- */
+.card:hover {
+    background-color: #F2F5F6;
+    
+     
+    border-color: #e0e0e0;
+} 
+
+.card .icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 30px;
+}
+
+.card .icon img {
+    width: 100%;
+    height: auto;
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Tablet ve Mobil Uyumluluk */
+@media (max-width: 992px) {
+    .cards-wrapper {
+        flex-direction: column;
+    }
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
