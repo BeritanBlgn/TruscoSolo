@@ -497,31 +497,31 @@ opacity: 1;
 
 
 
-
+/* 2. Ana Dış Konteyner */
 .numbers-container {
-    padding: 100px 10%; 
+    padding: 100px 10%; /* Üst-alt 100px, Sağ-sol %10 (Ekran büyüdükçe genişler) */
     background-color: #ffffff;
     width: 100%;
 }
 
-
+/* 3. Esnek Yapı (Flexbox) */
 .header-numbers {
     display: flex;
-    justify-content: center; 
+    justify-content: center; /* Öğeleri ortalar */
     align-items: flex-start;
-    flex-wrap: wrap;         
-    gap: 30px;             
+    flex-wrap: wrap;         /* Sığmayan öğeleri alt satıra atar (Responsive için kritik) */
+    gap: 30px;               /* Öğeler arası boşluk */
 }
 
-
+/* 4. Her Bir İstatistik Kutusu */
 .stat-box {
-    flex: 1;                 
-    min-width: 220px;        
-    text-align: center;      
+    flex: 1;                 /* Tüm kutular eşit genişlikte olur */
+    min-width: 220px;        /* Kutular 220px'den daha fazla sıkışmaz */
+    text-align: center;      /* İçerikleri ortalar */
     padding: 20px;
 }
 
-
+/* 5. Sayıların (H2) Stili */
 .stat-box h2 {
     font-family: "Lato", sans-serif;
     font-weight: 700;
@@ -532,7 +532,7 @@ opacity: 1;
     margin-bottom: 10px;
 }
 
-
+/* 6. Açıklama Metinlerinin (H4) Stili */
 .stat-box h4 {
     font-family: "Lato", sans-serif;
     color: #1E1E1E;
@@ -542,22 +542,24 @@ opacity: 1;
     letter-spacing: 0;
 }
 
+/* --- 7. RESPONSIVE (Mobil Uyumluluk) --- */
 
+/* Tablet Boyutu (992px altı) */
 @media (max-width: 992px) {
     .stat-box h2 {
-        font-size: 48px; 
+        font-size: 48px; /* Yazıları biraz küçültelim */
     }
 }
 
-
+/* Telefon Boyutu (600px altı) */
 @media (max-width: 600px) {
     .numbers-container {
-        padding: 50px 20px; 
+        padding: 50px 20px; /* Kenar boşluklarını daraltalım */
     }
     
     .stat-box {
-        flex: 1 1 100%; 
-        border-bottom: 1px solid #eee; 
+        flex: 1 1 100%; /* Her kutu tek satırı kaplasın (Alt alta dizilim) */
+        border-bottom: 1px solid #eee; /* Aralarına hafif bir çizgi (isteğe bağlı) */
     }
 
     .stat-box:last-child {
