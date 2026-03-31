@@ -495,72 +495,107 @@ opacity: 1;
     }
 }
 
-
-
-
-.numbers-container {
-    padding: 100px 10%; 
-    background-color: #ffffff;
-    width: 100%;
+.numbers-container{
+width: 1440;
+height: 320;
+padding-top: 100px;
+padding-right: 150px;
+padding-bottom: 100px;
+padding-left: 150px;
+gap: 64px;
+opacity: 1;
 }
 
+.generate h2{
+    font-family: "Lato";
+font-weight: 700;
+color: #043A53;
+font-style: Bold;
+font-size: 60px;
+leading-trim: NONE;
+line-height: 72px;
+letter-spacing: -2%;
+text-align: center;
 
-.header-numbers {
-    display: flex;
-    justify-content: center; 
-    align-items: flex-start;
-    flex-wrap: wrap;         
-    gap: 30px;             
+}
+.generate h4{
+    font-family: "Lato";
+font-weight: 700;
+font-style: Bold;
+font-size: 24px;
+leading-trim: NONE;
+line-height: 32px;
+letter-spacing: 0%;
+text-align: center;
+
 }
 
-
-.stat-box {
-    flex: 1;                 
-    min-width: 220px;        
-    text-align: center;      
-    padding: 20px;
-}
-
-
-.stat-box h2 {
-    font-family: "Lato", sans-serif;
-    font-weight: 700;
+.grew h2{
+    font-family: "Lato";
     color: #043A53;
-    font-size: 60px;
-    line-height: 72px;
-    letter-spacing: -2%;
-    margin-bottom: 10px;
+font-weight: 700;
+font-style: Bold;
+font-size: 60px;
+leading-trim: NONE;
+line-height: 72px;
+letter-spacing: -2%;
+text-align: center;
+
 }
+.grew h4{
+    font-family: "Lato";
+font-weight: 700;
+font-style: Bold;
+font-size: 24px;
+leading-trim: NONE;
+line-height: 32px;
+letter-spacing: 0%;
+text-align: center;
 
-
-.stat-box h4 {
-    font-family: "Lato", sans-serif;
-    color: #1E1E1E;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 32px;
-    letter-spacing: 0;
 }
+.countries h2{
+    font-family: "Lato";
+    color: #043A53;
+font-weight: 700;
+font-style: Bold;
+font-size: 60px;
+leading-trim: NONE;
+line-height: 72px;
+letter-spacing: -2%;
+text-align: center;
 
-
-@media (max-width: 992px) {
-    .stat-box h2 {
-        font-size: 48px; 
-    }
 }
+.countries h4{
+    font-family: "Lato";
+font-weight: 700;
+font-style: Bold;
+font-size: 24px;
+leading-trim: NONE;
+line-height: 32px;
+letter-spacing: 0%;
+text-align: center;
 
+}
+.customers h2{
+    font-family: "Lato";
+    color: #043A53;
+font-weight: 700;
+font-style: Bold;
+font-size: 60px;
+leading-trim: NONE;
+line-height: 72px;
+letter-spacing: -2%;
+text-align: center;
 
-@media (max-width: 600px) {
-    .numbers-container {
-        padding: 50px 20px; 
-    }
-    
-    .stat-box {
-        flex: 1 1 100%; 
-        border-bottom: 1px solid #eee; 
-    }
+}
+.customers h4{
+    font-family: "Lato";
+font-weight: 700;
+font-style: Bold;
+font-size: 24px;
+leading-trim: NONE;
+line-height: 32px;
+letter-spacing: 0%;
+text-align: center;
 
-    .stat-box:last-child {
-        border-bottom: none;
-    }
 }
