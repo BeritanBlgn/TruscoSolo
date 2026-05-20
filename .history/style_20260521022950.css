@@ -594,19 +594,15 @@ opacity: 1;
 
 .founder-heading {
     font-family: "Lato", sans-serif;
-    font-size: 60px;
+    font-size: 48px;
     font-weight: 700;
     color: #12141D;
-    padding-left: 150px;
-    padding-right: 52px;
     margin-bottom: 24px;
     line-height: 1.2;
 }
 
 .founder-quote {
     font-family: "Lato", sans-serif;
-    padding-left: 150px;
-    padding-right: 52px;
     font-size: 24px;
     line-height: 1.7;
     color: black;
@@ -619,7 +615,6 @@ opacity: 1;
 }
 
 .founder-name {
-     padding-left: 150px;
     font-family: "Lato", sans-serif;
     font-size: 20px;
     font-weight: 700;
@@ -628,17 +623,14 @@ opacity: 1;
 }
 
 .founder-title {
-     padding-left: 150px;
     font-family: "Lato", sans-serif;
     font-size: 16px;
-    color: #404040;
-    font-weight: 400;
+    color: #787878;
     margin: 0;
 }
 
 /* CTA Button */
 .btn-meet-team {
-     margin-left: 150px;
     display: inline-flex;
     align-items: center;
     background-color: #043A53;

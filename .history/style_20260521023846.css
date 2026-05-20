@@ -638,12 +638,12 @@ opacity: 1;
 
 /* CTA Button */
 .btn-meet-team {
-     margin-left: 150px;
+    
     display: inline-flex;
     align-items: center;
     background-color: #043A53;
     color: #ffffff;
-    padding: 14px 28px;
+    padding: 14px 150px;
     border-radius: 50px;
     font-family: "Lato", sans-serif;
     font-weight: 700;

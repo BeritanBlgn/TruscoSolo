@@ -628,7 +628,6 @@ opacity: 1;
 }
 
 .founder-title {
-     padding-left: 150px;
     font-family: "Lato", sans-serif;
     font-size: 16px;
     color: #404040;
@@ -638,7 +637,6 @@ opacity: 1;
 
 /* CTA Button */
 .btn-meet-team {
-     margin-left: 150px;
     display: inline-flex;
     align-items: center;
     background-color: #043A53;

@@ -638,7 +638,7 @@ opacity: 1;
 
 /* CTA Button */
 .btn-meet-team {
-     margin-left: 150px;
+     padding-left: 150px;
     display: inline-flex;
     align-items: center;
     background-color: #043A53;
