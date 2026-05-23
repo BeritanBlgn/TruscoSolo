@@ -1150,7 +1150,7 @@ opacity: 1;
   z-index: 0;
 }
 .quote::before {
-  content: url(./images/“.png);
+  content: url(./images/“.svg);
   font-size: 36px;
   color: orange;
   font-weight: 700;
