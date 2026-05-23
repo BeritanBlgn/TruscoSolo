@@ -142,7 +142,7 @@ body {
     padding: 20px;
 }
 
-.hero-conta {
+.hero-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1388,11 +1388,10 @@ color: #404040;
     align-items: center;
     gap: 40px;
     position: relative;
-    background-color: #12141D;
 }
 
 /* --- Sol İçerik Alanı --- */
-.hero-cont {
+.hero-content {
     display: flex;
     flex-direction: column;
     gap: 30px;

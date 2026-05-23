@@ -1396,6 +1396,7 @@ color: #404040;
     display: flex;
     flex-direction: column;
     gap: 30px;
+    padding-left: 150px;
 }
 
 .hero-title {
